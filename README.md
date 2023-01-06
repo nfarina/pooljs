@@ -23,10 +23,7 @@ import { iterateList } from "./stripeiterators";
 // This creates an async iterable that will iterate over all
 // balance transactions in your Stripe account.
 const balanceTransactions = iterateList((starting_after, limit) =>
-  stripe.balanceTransactions.list({
-    starting_after,
-    limit,
-  }),
+  stripe.balanceTransactions.list({ starting_after, limit }),
 );
 
 // Here's the user-defined async task that will be called
