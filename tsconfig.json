@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "strict": true,
+    // Ignore private class members.
+    "stripInternal": true,
+    // Target is only used for compiler warnings and errors, since we're not
+    // generating code with tsc.
+    "target": "ES2020",
+    // Make relevant libraries "available" for the purpose of typechecking.
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+  },
+}

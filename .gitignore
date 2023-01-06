@@ -1,0 +1,16 @@
+## Mac
+
+.DS_Store
+
+## NodeJS
+
+node_modules
+npm-debug.log
+
+## Typescript
+
+*.tsbuildinfo
+
+## Build Products
+
+dist/
