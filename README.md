@@ -4,7 +4,7 @@ Pool.js makes it easy to execute async tasks in parallel, with optional concurre
 
 It's a lightweight, one-file solution with zero dependencies and works in both Node.js and the browser.
 
-For more on why I wrote this, see [the blog post](https://example.com).
+For more on why I wrote this, see [the blog post](https://medium.com/@nfarina/pool-js-your-new-concurrency-friend-1d0c8e545c90).
 
 ## Installation
 
