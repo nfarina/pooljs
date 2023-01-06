@@ -17,6 +17,7 @@ npm install async-pool-js
 Pool.js works best with [async iterables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of). Here's an example of using it with the Stripe API (uses my [helper function](https://gist.github.com/nfarina/076061118de5c343ccbc08bf8a1c5ce8) for getting async iterators from Stripe Lists).
 
 ```js
+import { iterateWithPool } from "async-pool-js";
 import { iterateList } from "./stripeiterators";
 
 // This creates an async iterable that will iterate over all
@@ -68,6 +69,8 @@ If any of your tasks throws an error, it will be captured and bubbled up to the 
 If you can't use async iterators, you can use the `AsyncPool` class directly for complete control:
 
 ```js
+import { AsyncPool } from "async-pool-js";
+
 const pool = new AsyncPool(options);
 
 // Example loop that adds tasks to the pool.
