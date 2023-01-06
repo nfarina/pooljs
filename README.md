@@ -9,7 +9,7 @@ For more on why I wrote this, see [the blog post](https://example.com).
 ## Installation
 
 ```bash
-npm install pooljs
+npm install async-pool-js
 ```
 
 ## Usage

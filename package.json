@@ -1,5 +1,5 @@
 {
-  "name": "pooljs",
+  "name": "async-pool-js",
   "version": "1.0.0",
   "description": "Manage concurrent workers with optional rate-limiting",
   "main": "./dist/index.js",
