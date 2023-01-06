@@ -63,7 +63,7 @@ If any of your tasks throws an error, it will be captured and bubbled up to the 
 
 ## AsyncPool Class
 
-If you can't use async iterators, you can use the `AsyncPool` class directly for complete control:
+If you can't use async iterators, or if you want more fine-grained control, you can use the `AsyncPool` class directly:
 
 ```js
 import { AsyncPool } from "async-pool-js";
@@ -78,11 +78,9 @@ for (const item of items) {
   // Add a task to the pool and wait until it's safe to add another.
   // This method may also throw an Error if one if the tasks threw one.
   await pool.add(async () => {
-    // Call some user function to do some work.
-    const result = await doSomeWork(item);
-
-    // If you returned false, request that the pool be canceled.
-    if (result === false) pool.cancel();
+    // Call some user function to do some work. Pass along the pool instance
+    // so the worker task can cancel() it if desired.
+    await doSomeWork(pool, item);
   });
 }
 
